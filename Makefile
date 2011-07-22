@@ -182,7 +182,6 @@ SUBARCH := arm
 # Note: Some architectures assign CROSS_COMPILE in their arch/*/Makefile
 export KBUILD_BUILDHOST := $(SUBARCH)
 ARCH		?= $(SUBARCH)
-# Change the below line to match your cross-compile environment
 CROSS_COMPILE	?= arm-linux-gnueabi-
 
 # Architecture as present in compile.h
