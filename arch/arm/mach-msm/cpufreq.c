@@ -44,6 +44,8 @@ static struct cpufreq_frequency_table msm_freq_table[] = {
         { .frequency = 825600, .index = 9, },
         { .frequency = 844800, .index = 10, },
         { .frequency = 864000, .index = 11, },
+	// Not until we find the fucking voltage table	
+	//{ .frequency = 900000, .index = 12, },
         { .frequency = CPUFREQ_TABLE_END, .index = 0, },
 };
 
