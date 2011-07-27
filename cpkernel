@@ -1,6 +1,6 @@
 #!/bin/sh
-rm -f ../buildboot/zImage
-cp arch/arm/boot/zImage ../buildboot/
+rm -f ../kernel_updatezip_template-anykernel/kernel/zImage
+rm -f ../kernel_updatezip_template-anykernel/system/lib/modules/*
 cp arch/arm/boot/zImage ../kernel_updatezip_template-anykernel/kernel/
 cp drivers/net/tun.ko ../kernel_updatezip_template-anykernel/system/lib/modules/
 cp drivers/net/wireless/bcm4325/wireless.ko ../kernel_updatezip_template-anykernel/system/lib/modules/
