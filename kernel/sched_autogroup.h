@@ -12,7 +12,8 @@ static inline void autogroup_init(struct task_struct *init_task) {  }
 static inline struct task_group *
 autogroup_task_group(struct task_struct *p, struct task_group *tg)
 {
-	return tg;
+    return tg;
 }
 
 #endif /* CONFIG_SCHED_AUTOGROUP */
+
