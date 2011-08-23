@@ -3031,8 +3031,9 @@ static void __proc_set_tty(struct task_struct *tsk, struct tty_struct *tty)
 	put_pid(tsk->signal->tty_old_pgrp);
 	tsk->signal->tty = tty_kref_get(tty);
 	tsk->signal->tty_old_pgrp = NULL;
-
+#ifdef CONFIG_SCHED_AUTOGROUP
 	sched_autogroup_create_attach(tsk);
+#endif
 }
 
 static void proc_set_tty(struct task_struct *tsk, struct tty_struct *tty)
