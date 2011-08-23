@@ -977,7 +977,7 @@ static void shrink_readahead_size_eio(struct file *filp,
 	ra->ra_pages /= 4;
 }
 
-tatic inline int nr_mapped(void)
+static inline int nr_mapped(void)
 {
 	return global_page_state(NR_FILE_MAPPED) +
 		global_page_state(NR_ANON_PAGES);

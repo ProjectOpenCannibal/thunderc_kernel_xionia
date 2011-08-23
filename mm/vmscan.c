@@ -1661,7 +1661,7 @@ static void shrink_zone(int priority, struct zone *zone,
 
 			if (file && priority > 0)
 				tmp_priority = DEF_PRIORITY;
-			scan >>= tmp_priority
+			scan >>= tmp_priority;
 			scan = (scan * percent[file]) / 100;
 		}
 		nr[l] = nr_scan_try_batch(scan,
@@ -2506,12 +2506,12 @@ static void watermark_wakeup(unsigned long data)
 			goto out;
 		}
 	}
-out:
-	mod_timer(wt, jiffies + WT_EXPIRY);
-	return;
+	out:
+		mod_timer(wt, jiffies + WT_EXPIRY);
+		return;
 }
 
-*/
+/*
  * This kswapd start function will be called by init and node-hot-add.
  * On node-hot-add, kswapd will moved to proper cpus if cpus are hot-added.
  */
